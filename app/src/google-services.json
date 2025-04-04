@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "690286118806",
+    "project_id": "gymcoach-4d014",
+    "storage_bucket": "gymcoach-4d014.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:690286118806:android:895c71eaa2007a7c3bbfb7",
+        "android_client_info": {
+          "package_name": "com.example.gymcoach"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBPV03h0jXZnUGsEuFc27f_kxbLU4A6x68"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:690286118806:android:3ff9e88cac39cce13bbfb7",
+        "android_client_info": {
+          "package_name": "com.example.gymcoach.debug"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBPV03h0jXZnUGsEuFc27f_kxbLU4A6x68"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

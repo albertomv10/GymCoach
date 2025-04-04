@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">GymCoach</string>
+    <string name="title_home">Home</string>
+    <string name="title_entrenamientos">Entrenamientos</string>
+    <string name="title_perfil">Perfil</string>
+    <string name="send_string">Enviar</string>
+    <string name="send_message_hint">Enviar mensaje</string>
+</resources>

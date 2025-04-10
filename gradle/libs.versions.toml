@@ -2,6 +2,7 @@
 agp = "8.5.2"
 coreSplashscreen = "1.0.1"
 firebaseBom = "32.7.3"
+firebaseStorageKtx = "21.0.1"
 googleServices = "4.4.2"
 hiltAndroid = "2.48"
 hiltAndroidCompiler = "2.48"
@@ -26,6 +27,7 @@ androidx-core-splashscreen = { module = "androidx.core:core-splashscreen", versi
 firebase-bom = { module = "com.google.firebase:firebase-bom", version.ref = "firebaseBom" }
 firebase-database = { module = "com.google.firebase:firebase-database" }
 firebase-database-ktx = { module = "com.google.firebase:firebase-database-ktx" }
+firebase-storage-ktx = { module = "com.google.firebase:firebase-storage-ktx", version.ref = "firebaseStorageKtx" }
 google-firebase-database-ktx = { module = "com.google.firebase:firebase-database-ktx" }
 google-services = { module = "com.google.gms:google-services", version.ref = "googleServices" }
 hilt-android = { module = "com.google.dagger:hilt-android", version.ref = "hiltAndroid" }

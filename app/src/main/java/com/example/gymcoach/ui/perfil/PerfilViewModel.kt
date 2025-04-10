@@ -1,13 +1,22 @@
 package com.example.gymcoach.ui.perfil
 
+import android.net.Uri
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
+import com.example.gymcoach.data.network.FirebaseStorageService
+import dagger.hilt.android.lifecycle.HiltViewModel
+import javax.inject.Inject
 
-class PerfilViewModel : ViewModel() {
+@HiltViewModel
+class PerfilViewModel @Inject constructor(private val storageService: FirebaseStorageService) : ViewModel() {
 
     private val _text = MutableLiveData<String>().apply {
         value = "This is notifications Fragment"
     }
     val text: LiveData<String> = _text
+
+    fun uploadBasicImage(uri: Uri) {
+        storageService.uploadBasicImage(uri)
+    }
 }

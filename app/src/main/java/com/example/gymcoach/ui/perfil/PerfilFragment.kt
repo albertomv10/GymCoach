@@ -5,10 +5,14 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.TextView
+import androidx.activity.result.contract.ActivityResultContracts
 import androidx.fragment.app.Fragment
+import androidx.fragment.app.viewModels
 import androidx.lifecycle.ViewModelProvider
 import com.example.gymcoach.databinding.FragmentPerfilBinding
+import dagger.hilt.android.AndroidEntryPoint
 
+@AndroidEntryPoint
 class PerfilFragment : Fragment() {
 
 private var _binding: FragmentPerfilBinding? = null
@@ -16,23 +20,30 @@ private var _binding: FragmentPerfilBinding? = null
   // onDestroyView.
   private val binding get() = _binding!!
 
+    private val uploadViewModel: PerfilViewModel by viewModels()
+    private var intentgallerylauncher = registerForActivityResult(ActivityResultContracts.GetContent()) { uri ->
+        // Handle the returned URI
+        uri?.let {
+            uploadViewModel.uploadBasicImage(it)
+        }
+    }
+
   override fun onCreateView(
     inflater: LayoutInflater,
     container: ViewGroup?,
     savedInstanceState: Bundle?
   ): View {
-    val notificationsViewModel =
-            ViewModelProvider(this).get(PerfilViewModel::class.java)
 
     _binding = FragmentPerfilBinding.inflate(inflater, container, false)
-    val root: View = binding.root
-
-    val textView: TextView = binding.textNotifications
-    notificationsViewModel.text.observe(viewLifecycleOwner) {
-      textView.text = it
-    }
-    return root
+    return binding.root
   }
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+
+        binding.fabImage.setOnClickListener {
+            intentgallerylauncher.launch("image/*")
+        }
+    }
 
 override fun onDestroyView() {
         super.onDestroyView()

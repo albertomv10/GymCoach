@@ -61,12 +61,12 @@ dependencies {
     implementation(libs.androidx.navigation.ui.ktx)
     implementation(libs.firebase.auth.ktx)
     implementation(libs.androidx.activity)
-    testImplementation(libs.junit)
     //Firebase
     implementation(platform(libs.firebase.bom))
     implementation(libs.firebase.auth.ktx)
     implementation(libs.firebase.database)
     implementation(libs.firebase.database.ktx)
+    implementation(libs.firebase.storage.ktx)
     //Dagger Hilt
     implementation(libs.hilt.android)
     kapt(libs.hilt.android.compiler)
@@ -74,6 +74,7 @@ dependencies {
     kapt(libs.androidx.hilt.compiler)
     //
     implementation(libs.androidx.core.splashscreen)
+    testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)
 }

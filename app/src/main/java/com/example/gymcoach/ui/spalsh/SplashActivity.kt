@@ -34,11 +34,7 @@ class SplashActivity : AppCompatActivity() {
         splshScreen.setKeepOnScreenCondition{false}
         navigateToLogin()
         finish()
-        /*Handler(Looper.getMainLooper()).postDelayed({
-            navigateToLogin()
-            finish()
-        }, 1000) // Espera 1 segundo
-        */
+
     }
     private fun navigateToLogin() {
         startActivity(Intent(this, LoginActivity::class.java))
